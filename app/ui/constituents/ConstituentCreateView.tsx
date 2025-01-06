@@ -50,7 +50,7 @@ const ConstituentCreateView: React.FC<FormProps> = ({ onSubmit }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="user-form">
+        <form onSubmit={handleSubmit} className="constituents-form">
             <h1>Create New Constituent</h1>
 
             <div>
@@ -86,7 +86,7 @@ const ConstituentCreateView: React.FC<FormProps> = ({ onSubmit }) => {
                 placeholder="Enter your Address" />
             </div>
 
-            <button className='create-button' type="submit">Create User</button>        
+            <button className='create-button' type="submit">Create Constituent</button>        
         </form>
     );
 };

@@ -12,7 +12,7 @@ const ConstituentExportView: React.FC = () => {
                 const response = await fetch('http://localhost:3000/constituents');
                 
                 if (!response.ok) {
-                    throw new Error('Failed to fetch users');
+                    throw new Error('Failed to fetch constituents');
                 }
                 const data = await response.json();
                 setConstituent(data);

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Constituent } from './constituentModel';
 
 const ConstituentListView: React.FC = () => {
-  // State hooks for managing users, loading state, and error state
+  
   const [constituents, setConstituent] = useState<Constituent[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -16,7 +16,7 @@ const ConstituentListView: React.FC = () => {
         const response = await fetch('http://localhost:3000/constituents');
         
         if (!response.ok) {
-          throw new Error('Failed to fetch users');
+          throw new Error('Failed to fetch constituents');
         }
         const data = await response.json();
         setConstituent(data);
@@ -43,7 +43,7 @@ const ConstituentListView: React.FC = () => {
 
   return (    
     <div>
-      <h1>User List</h1>
+      <h1>Constituents List</h1>
       <table className='styled-table'>
         <thead>
           <tr>
